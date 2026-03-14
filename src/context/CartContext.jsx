@@ -2,7 +2,6 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext();
 
-// Order management setup
 const API_BASE_URL = "http://localhost:5050/api";
 
 export function CartProvider({ children }) {

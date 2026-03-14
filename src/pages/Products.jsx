@@ -3,7 +3,6 @@ import { CartContext } from "../context/CartContext";
 import { formatRupiah } from "../utils/formatCurrency";
 import "./Products.css";
 
-// Shopping cart and product category filtering
 function Products() {
   const { addToCart } = useContext(CartContext);
   const [selectedCategory, setSelectedCategory] = useState("semua");
