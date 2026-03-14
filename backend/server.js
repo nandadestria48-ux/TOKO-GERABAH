@@ -5,9 +5,15 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./swagger");
+const { createClient } = require("@supabase/supabase-js");
 require("dotenv").config();
 
 const app = express();
+
+// Supabase Client
+const supabaseUrl = "https://vmelgomwzgqdthnzjvur.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZtZWxnb213emdxZHRobnpqdnVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM0ODA0MDEsImV4cCI6MjA4OTA1NjQwMX0.3vHoor8wURUyzqAS5ybWiVX-PeJvnTk9qSpOFIh0beo";
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Middleware
 app.use(cors());
@@ -916,7 +922,7 @@ app.get("/api/health", (req, res) => {
 });
 
 // Start Server
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 5577;
 initDatabase().then(() => {
   app.listen(PORT, () => {
     console.log("\n" + "=".repeat(50));
@@ -924,7 +930,7 @@ initDatabase().then(() => {
     console.log("=".repeat(50));
     console.log(`🚀 Server: http://localhost:${PORT}`);
     console.log(`📚 Admin: username: admin | password: 123`);
-    console.log(`📖 API Docs: http://localhost:5050/api-docs/`);
+    console.log(`📖 API Docs: http://localhost:5577/api-docs/`);
     console.log("=".repeat(50) + "\n");
   });
 }).catch(error => {

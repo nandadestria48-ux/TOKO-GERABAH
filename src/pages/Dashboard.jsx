@@ -22,7 +22,7 @@ function Dashboard() {
         setLoading(true);
         
         // Fetch products
-        const productsRes = await fetch("http://localhost:5050/api/products");
+        const productsRes = await fetch("http://localhost:5577/api/products");
         const products = productsRes.ok ? await productsRes.json() : [];
         
         // Hitung revenue dari orders di context

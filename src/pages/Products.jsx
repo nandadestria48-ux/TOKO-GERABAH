@@ -15,7 +15,7 @@ function Products() {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:5050/api/products");
+        const response = await fetch("http://localhost:5577/api/products");
         
         if (!response.ok) {
           throw new Error("Gagal fetch produk");
@@ -26,7 +26,7 @@ function Products() {
         setError(null);
       } catch (err) {
         console.error("Error fetching products:", err);
-        setError("Gagal memuat produk. Pastikan backend running di port 5050");
+        setError("Gagal memuat produk. Pastikan backend running di port 5577");
         // Fallback ke data lokal jika backend tidak berjalan
         setProducts([
           {
