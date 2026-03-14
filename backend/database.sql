@@ -64,16 +64,15 @@ INSERT INTO users (username, email, password, phone, address, role) VALUES (
   'admin'
 ) ON DUPLICATE KEY UPDATE id=id;
 
--- Insert Default Products (8 Pottery Items)
 INSERT INTO products (title, author, price, category, image, rating, reviews, discount) VALUES
-('Clean Code', 'Robert C. Martin', 189000, 'programming', 'https://images-na.ssl-images-amazon.com/images/P/0132350882.01.L.jpg', 4.8, 45, 15),
-('The Pragmatic Programmer', 'David Thomas, Andrew Hunt', 185000, 'programming', 'https://covers.openlibrary.org/b/id/8338103-L.jpg', 4.7, 38, 10),
-('Design Patterns', 'Gang of Four', 225000, 'programming', 'https://images-na.ssl-images-amazon.com/images/P/0201633612.01.L.jpg', 4.6, 52, 5),
-('1984', 'George Orwell', 95000, 'fiksi', 'https://images-na.ssl-images-amazon.com/images/P/0451524934.01.L.jpg', 4.9, 128, 20),
-('Sapiens', 'Yuval Noah Harari', 135000, 'nonfiksi', 'https://images-na.ssl-images-amazon.com/images/P/0062316095.01.L.jpg', 4.8, 95, 0),
-('Atomic Habits', 'James Clear', 105000, 'self-help', 'https://images-na.ssl-images-amazon.com/images/P/0735211299.01.L.jpg', 4.9, 210, 25),
-('The Silent Patient', 'Alex Michaelides', 89000, 'fiksi', 'https://images-na.ssl-images-amazon.com/images/P/1250301696.01.L.jpg', 4.7, 67, 12),
-('Mindset', 'Carol S. Dweck', 125000, 'self-help', 'https://images-na.ssl-images-amazon.com/images/P/0345472322.01.L.jpg', 4.6, 143, 8)
+('Piring Tradisional Ukir', 'Pengrajin Toko Gerabah', 85000.00, 'piring', 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=500', 4.9, 156, 15),
+('Vas Bunga Minimalis', 'Pengrajin Toko Gerabah', 125000.00, 'vas', 'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//91/MTA-77234220/no-brand_no-brand_full01.jpg', 4.8, 89, 10),
+('Cangkir Kopi Artisan', 'Pengrajin Toko Gerabah', 45000.00, 'cangkir', 'https://down-id.img.susercontent.com/file/id-11134207-7r98r-lx13gjcouyi638@resize_w82_nl.webp', 4.7, 234, 20),
+('Mangkuk Tua Besar', 'Pengrajin Toko Gerabah', 95000.00, 'mangkuk', 'https://www.galleryfurnicraftjepara.com/wp-content/uploads/2023/01/mangkuk-kayu-jati-30x8-@200-02-scaled.jpg', 4.6, 145, 5),
+('Kendi Tradisional Indah', 'Pengrajin Toko Gerabah', 155000.00, 'kendi', 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Kendi_LACMA_M.88.72.jpg', 4.8, 112, 0),
+('Pot Tanaman Dekoratif', 'Pengrajin Toko Gerabah', 65000.00, 'pot', 'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-40166492/tidak_ada_merk_pot_tanaman_dekoratif_tanah_liat_tembikar_dia_9cm_wmo_ik1908_chiaf_full01_qz8qgi3s.jpg', 4.9, 287, 25),
+('Guci Hias Antik', 'Pengrajin Toko Gerabah', 245000.00, 'guci', 'https://p19-images-sign-sg.tokopedia-static.net/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2021/7/22/c55571d1-6154-4975-bc33-27fb0072e5c9.jpg~tplv-aphluv4xwc-white-pad-v1:1600:1600.jpeg?lk3s=0ccea506&x-expires=1773463539&x-signature=3FrjEQij4ZqEovlFJknGlCxJpVE%3D&x-signature-webp=p2KZhNZ%2BxYjl2NHEQYMcH5FupKU%3D', 4.7, 78, 8),
+('Perlengkapan Teh Tradisional', 'Pengrajin Toko Gerabah', 185000.00, 'set-teh', 'https://richcreme.com/wp-content/uploads/2025/07/header-24.webp', 4.8, 93, 12)
 ON DUPLICATE KEY UPDATE id=id;
 
 -- Verify Setup
