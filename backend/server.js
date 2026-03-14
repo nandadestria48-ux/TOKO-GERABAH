@@ -7,6 +7,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./swagger");
 require("dotenv").config();
 
+// API endpoints setup
 const app = express();
 
 // Middleware
