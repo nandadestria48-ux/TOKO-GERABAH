@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation, useNavigate } from
 import { CartProvider } from "./context/CartContext";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import AdminPage from "./pages/AdminPage";
 import Products from "./pages/Products";
 import ShoppingCart from "./pages/ShoppingCart";
 import OrderHistory from "./pages/OrderHistory";
@@ -34,6 +35,18 @@ function App() {
               isLoggedIn ? (
                 <ProtectedLayout sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
                   <Dashboard />
+                </ProtectedLayout>
+              ) : (
+                <Navigate to="/" />
+              )
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              isLoggedIn ? (
+                <ProtectedLayout sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+                  <AdminPage />
                 </ProtectedLayout>
               ) : (
                 <Navigate to="/" />

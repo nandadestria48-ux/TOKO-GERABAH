@@ -1,0 +1,225 @@
+.admin-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-page h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.admin-tabs button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.admin-tabs button.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.admin-tabs button:hover {
+  background: #f8f9fa;
+}
+
+.admin-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-header h2 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.admin-header button {
+  padding: 8px 16px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-header button:hover {
+  background: #229954;
+}
+
+.products-table, .users-table {
+  overflow-x: auto;
+}
+
+.products-table table, .users-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.products-table th, .products-table td,
+.users-table th, .users-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.products-table th, .users-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.products-table tr:hover, .users-table tr:hover {
+  background: #f8f9fa;
+}
+
+.products-table button, .users-table button {
+  padding: 6px 12px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.products-table button:first-child {
+  background: #f39c12;
+  color: white;
+}
+
+.products-table button:last-child {
+  background: #e74c3c;
+  color: white;
+}
+
+.users-table button:first-child {
+  background: #f39c12;
+  color: white;
+}
+
+.users-table button:last-child {
+  background: #e74c3c;
+  color: white;
+}
+
+.products-table button:hover, .users-table button:hover {
+  opacity: 0.8;
+}
+
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-container h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-container textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-buttons button[type="submit"] {
+  background: #3498db;
+  color: white;
+}
+
+.form-buttons button[type="button"] {
+  background: #95a5a6;
+  color: white;
+}
+
+.form-buttons button:hover {
+  opacity: 0.9;
+}
+
+.admin-denied {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 18px;
+  padding: 50px;
+}
+
+.orders-admin {
+  text-align: center;
+  padding: 50px;
+}
+
+.orders-admin p {
+  color: #7f8c8d;
+  margin: 10px 0;
+}

@@ -95,6 +95,11 @@ Kami percaya bahwa setiap gerabah memiliki cerita, nilai seni, dan keunikan ters
             <button className="menu-btn" onClick={() => navigate("/profile")}>
               Profil
             </button>
+            {user?.role === "admin" && (
+              <button className="menu-btn admin-btn" onClick={() => navigate("/admin")}>
+                🏗️ Admin Panel
+              </button>
+            )}
           </div>
         </div>
       </div>
